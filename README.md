@@ -1,53 +1,87 @@
-# Tutorial: Building a Temperature and Humidity Sensor
+<h1 align="center">Smart Horticulture</h1>
 
-**Author:** [Olle Jönsson](https://github.com/Aleij)  
-**Student Credentials:** xx666x
+<p align="center">
+  <img src="images/banner.jpg" alt="Project Banner">
+</p>
+
+<p align="center">
+  By: <a href="https://github.com/Aleij">Olle Jönsson</a> - Student ID: XX666X
+</p>
 
 ## Project Overview
-This tutorial will guide you through the process of building an awesome  sensor using a Pycom LoPy4 device programmed with MicroPython. The project aims to provide insights into environmental conditions and enable data collection for further analysis.
 
-- Approximate Time: X hours
+The Smart Horticulture project aims to build a system for monitoring temperature, humidity, rainfall, and motion in a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
 
 ## Objective
-The objective of this project is to create a sensor device that can measure temperature and humidity in a specific environment. The collected data will be used to gain insights into environmental conditions and potentially be integrated into other systems or applications.
 
-- Why This Project: Explain the motivation behind choosing this project and its relevance.
-- Purpose: Describe the intended purpose of the sensor and the insights it is expected to provide.
+The main objective of the Smart Horticulture project is to create an automated monitoring system for horticulture environments. By utilizing sensors to collect data on temperature, humidity, rainfall, and motion, we aim to achieve the following:
+
+- Monitor and maintain optimal environmental conditions for plant growth
+- Detect and respond to changes in environmental parameters
+- Provide insights for better plant care and resource management
 
 ## Materials
 
-| Component                  | Description                                   | Purchase Link           | Price ($) |
-|----------------------------|-----------------------------------------------|-------------------------|-----------|
-| Raspberry pi pico WH         | Neat little device for IoT projects            | [Link](https://example.com/pycom-lopy4](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)) | 109 SEK         |
-| ![DHT11](images/lopy4.jpg) | Digital temperatur- och fuktsensor                     |                         |           |
-| DHT11 Temperature and Humidity Sensor | Measures temperature and humidity    | [Link](https://example.com/dht11-sensor) | X         |
-| ![DHT11 Sensor](images/dht11.jpg)   | Image of the DHT11 sensor                     |                         |           |
-| Other Components           | List any additional components here 
+List of materials used in the project:
+
+| Component                                 | Description                            | Purchase Link                                                        | Price ($) |
+|-------------------------------------------|----------------------------------------|----------------------------------------------------------------------|-----------|
+| <img src="images/PICO-Pi-HERO.jpg" width="100"> | Raspberry Pi Pico WH                   | [Link](https://example.com/pico-wh)                                  | 109 SEK   |
+| <img src="images/dht11.jpg" width="100">   | DHT11 Temperature and Humidity Sensor   | [Link](https://example.com/dht11-sensor)                              | X         |
+| <img src="images/rain-sensor.jpg" width="100">  | Rain Sensor                            | [Link](https://example.com/rain-sensor)                               | X         |
+| <img src="images/pir-sensor.jpg" width="100">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://example.com/pir-sensor)                                | X         |
+
+Note: Provide brief specifications and cost information for each component.
 
 ## Computer Setup
-In this section, explain how to set up the computer environment for programming the Pycom LoPy4 device. Include the following information:
 
-- IDE: Mention the chosen integrated development environment (IDE) for programming.
-- Firmware Flashing: Describe the steps to flash the MicroPython firmware to the device.
-- Plugin Installation: Explain any necessary plugin installations or setup steps.
-- Other Dependencies: Mention any additional software or drivers required for the setup.
+To program the Raspberry Pi Pico WH microcontroller, follow these steps:
 
-## Assembly and Wiring
-Provide a detailed explanation of how to assemble and wire the components. Include circuit diagrams, if applicable, and describe the wiring connections. Explain any considerations regarding resistors, current, and voltage. Specify if the setup is for development or can be used in production.
+1. Flash the MicroPython firmware onto the Raspberry Pi Pico WH.
+2. Install your preferred Integrated Development Environment (IDE) such as Visual Studio Code or Thonny.
+3. Set up the necessary plugins and extensions for MicroPython development.
+4. Connect the Raspberry Pi Pico WH to your computer using a USB cable.
+5. Upload the code to the microcontroller and ensure proper communication is established.
 
-Include a circuit diagram and electrical calculations, if relevant.
+## Ubuntu Server Setup
+
+To set up the Ubuntu server for running Mosquitto MQTT protocol and Node-RED, follow these steps:
+
+1. Install Ubuntu Server on your old laptop or a dedicated machine.
+2. Install Mosquitto MQTT broker on the Ubuntu server for communication between devices.
+3. Install Node-RED on the Ubuntu server for building the user interface and data flow management.
+4. Configure Mosquitto MQTT and Node-RED to communicate with the Raspberry Pi Pico WH and other devices.
+5. Ensure that the Ubuntu server is connected to the same network as the Raspberry Pi Pico WH.
+
+## Data Transmission and Visualization
+
+The Smart Horticulture project utilizes the MQTT protocol for data transmission and Node-RED for data visualization and user interface. The workflow is as follows:
+
+1. The Raspberry Pi Pico WH collects sensor data and publishes it to specific MQTT topics.
+2. The Ubuntu server, running Mosquitto MQTT broker, receives the published data.
+3. Node-RED subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
+4. The dashboard displays real-time sensor readings, historical data, and provides control options for the horticulture system.
+
+## Data Storage
+
+To save data from the sensors on the Ubuntu server, we use the "ToFile" node in Node-RED. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure the "ToFile" node to save the data at specific intervals, such as once every 30 minutes.
 
 ## Platform
-Describe the chosen platform for data transmission and connectivity. Explain the functionality of the platform and why it was selected. Discuss whether the platform is based on a local installation or a cloud service. Provide information on scaling options and potential limitations.
 
-- Local or Cloud: Specify if the platform is local or cloud-based.
-- Free or Paid Subscription: Mention the available subscription options.
-- Scaling: Explain the scalability options for the chosen platform.
+The Smart Horticulture project utilizes a local installation of a cloud-based platform for data processing and visualization. The platform offers scalability and flexibility for future expansion of the project. Consider the following aspects:
 
-## Code
-Provide an overview of the code used for the temperature and humidity sensor. Import the core functions and explain the purpose of each function. Focus on the core functionalities, such as network setup, wireless communication, and data processing.
+- Data storage and retrieval
+- Data visualization and dashboard creation
+- Integration with other services or APIs
+- Cost considerations for scaling the project
+
+## The Code
+
+The code for the Smart Horticulture project is written in MicroPython using Visual Studio Code with the PyMakr extension. The code includes the necessary setup for reading sensor data, connecting to the MQTT broker, and publishing the data. It also includes any specific functionalities for data processing and device control.
 
 ```python
+# Add code snippets and explanations here
+
 import this as that
 
 def my_cool_function():
@@ -56,3 +90,7 @@ def my_cool_function():
 s.send(package)
 
 # Explain your code!
+
+
+
+
