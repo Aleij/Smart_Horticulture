@@ -19,7 +19,7 @@ The objective of this project is to create a sensor device that can measure temp
 | Component                  | Description                                   | Purchase Link           | Price ($) |
 |----------------------------|-----------------------------------------------|-------------------------|-----------|
 | Raspberry pi pico WH         | Neat little device for IoT projects            | [Link](https://example.com/pycom-lopy4](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)) | 109 SEK         |
-| ![LoPy4 Device](images/lopy4.jpg) | Image of the LoPy4 device                    |                         |           |
+| ![DHT11](images/lopy4.jpg) | Digital temperatur- och fuktsensor                     |                         |           |
 | DHT11 Temperature and Humidity Sensor | Measures temperature and humidity    | [Link](https://example.com/dht11-sensor) | X         |
 | ![DHT11 Sensor](images/dht11.jpg)   | Image of the DHT11 sensor                     |                         |           |
 | Other Components           | List any additional components here 
