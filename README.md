@@ -26,12 +26,11 @@ List of materials used in the project:
 
 | Component                                 | Description                            | Purchase Link                                                        | Price ($) |
 |-------------------------------------------|----------------------------------------|----------------------------------------------------------------------|-----------|
-| <img src="images/PICO-Pi-HERO.jpg" width="100"> | Raspberry Pi Pico WH                   | [Link](https://example.com/pico-wh)                                  | 109 SEK   |
-| <img src="images/dht11.jpg" width="100">   | DHT11 Temperature and Humidity Sensor   | [Link](https://example.com/dht11-sensor)                              | X         |
-| <img src="images/rain-sensor.jpg" width="100">  | Rain Sensor                            | [Link](https://example.com/rain-sensor)                               | X         |
-| <img src="images/pir-sensor.jpg" width="100">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://example.com/pir-sensor)                                | X         |
+| <img src="images/PICO-WH-HERO.jpg" width="200"> | Raspberry Pi Pico WH                   | [Link](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)                                  | 109 SEK   |
+| <img src="images/DHT11.jpg" width="200">   | DHT11 Temperature and Humidity Sensor   | [Link](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/)                              | 49 SEK         |
+| <img src="images/RAIN.jpg" width="200">  | Rain Sensor                            | [Link](https://www.electrokit.com/produkt/regnsensor/)                               | 39 SEK         |
+| <img src="images/PIR.jpg" width="200">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://www.electrokit.com/produkt/pir-rorelsedetektor-hc-sr501/)                                | 49 SEK         |
 
-Note: Provide brief specifications and cost information for each component.
 
 ## Computer Setup
 
