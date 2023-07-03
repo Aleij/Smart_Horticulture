@@ -34,13 +34,57 @@ List of materials used in the project:
 
 ## Computer Setup
 
-To program the Raspberry Pi Pico WH microcontroller, follow these steps:
+## Programming the Raspberry Pi Pico WH Microcontroller
 
-1. Flash the MicroPython firmware onto the Raspberry Pi Pico WH.
-2. Install your preferred Integrated Development Environment (IDE) such as Visual Studio Code or Thonny.
-3. Set up the necessary plugins and extensions for MicroPython development.
-4. Connect the Raspberry Pi Pico WH to your computer using a USB cable.
-5. Upload the code to the microcontroller and ensure proper communication is established.
+To program the Raspberry Pi Pico WH microcontroller on a Windows 11 computer using Visual Studio Code, follow these steps:
+
+1. **Flash the MicroPython firmware onto the Raspberry Pi Pico WH.**
+
+   - Download the latest MicroPython firmware for Raspberry Pi Pico from the official website.
+   - Connect the Raspberry Pi Pico WH to your computer using a USB cable.
+   - Open a command prompt and navigate to the folder where you downloaded the firmware.
+   - Run the following command to flash the firmware:
+
+     ```
+     pio run -t upload
+     ```
+
+   ![Flashing the MicroPython firmware](https://example.com/flash-firmware.png)
+
+2. **Install Visual Studio Code.**
+
+   - Download Visual Studio Code from the official website.
+   - Run the installer and follow the on-screen instructions to complete the installation.
+
+   ![Installing Visual Studio Code](https://example.com/install-vscode.png)
+
+3. **Install the necessary extensions for MicroPython development in Visual Studio Code.**
+
+   - Launch Visual Studio Code.
+   - Open the Extensions view by clicking on the square icon on the left sidebar or by pressing `Ctrl+Shift+X`.
+   - Search for the following extensions and install them:
+     - MicroPython by Microsoft
+     - Pico-Go by Fredrik Esseen
+
+   ![Setting up MicroPython extensions](https://example.com/micropython-extensions.png)
+
+4. **Connect the Raspberry Pi Pico WH to your computer using a USB cable.**
+
+   - Take a USB cable and connect one end to the USB port on your computer and the other end to the USB port on the Raspberry Pi Pico WH.
+   - Ensure that the cable is securely connected to both devices.
+
+   ![Connecting Raspberry Pi Pico WH to computer](https://example.com/connect-pico.png)
+
+5. **Upload the code to the microcontroller and ensure proper communication is established.**
+
+   - Open the project folder in Visual Studio Code.
+   - Write or open your code file in Visual Studio Code.
+   - Click on the "Run" button in the top toolbar or use the keyboard shortcut `Ctrl+F5` to upload the code to the microcontroller.
+   - Check the output in the terminal or output window to verify successful communication.
+
+   ![Uploading code to Raspberry Pi Pico WH](https://example.com/upload-code.png)
+
+
 
 ## Ubuntu Server Setup
 
