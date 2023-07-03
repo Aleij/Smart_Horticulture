@@ -26,10 +26,10 @@ List of materials used in the project:
 
 | Component                                 | Description                            | Purchase Link                                                        | Price ($) |
 |-------------------------------------------|----------------------------------------|----------------------------------------------------------------------|-----------|
-| <img src="images/PICO-WH.jpg" width="200"> | Raspberry Pi Pico WH                   | [Link](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)                                  | 109 SEK   |
-| <img src="images/DHT11.jpg" width="200">   | DHT11 Temperature and Humidity Sensor   | [Link](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/)                              | 49 SEK         |
-| <img src="images/RAIN.jpg" width="200">  | Rain Sensor                            | [Link](https://www.electrokit.com/produkt/regnsensor/)                               | 39 SEK         |
-| <img src="images/PIR.jpg" width="200">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://www.electrokit.com/produkt/pir-rorelsedetektor-hc-sr501/)                                | 49 SEK         |
+| <img src="images/PICO-WH.jpg" width="150"> | Raspberry Pi Pico WH                   | [Link](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)                                  | 109 SEK   |
+| <img src="images/DHT11.jpg" width="150">   | DHT11 Temperature and Humidity Sensor   | [Link](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/)                              | 49 SEK  |
+| <img src="images/RAIN.jpg" width="150">  | Rain Sensor                            | [Link](https://www.electrokit.com/produkt/regnsensor/)                               | 39 SEK         |
+| <img src="images/PIR.jpg" width="150">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://www.electrokit.com/produkt/pir-rorelsedetektor-hc-sr501/)                                | 49 SEK         |
 
 
 ## Computer Setup
