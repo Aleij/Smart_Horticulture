@@ -181,7 +181,7 @@ The Smart Horticulture project utilizes a local installation of a cloud-based pl
 
 ## The Code
 
-The code for the Smart Horticulture project is written in MicroPython using Visual Studio Code with the PyMakr extension. The code includes the necessary setup for reading sensor data, connecting to the MQTT broker, and publishing the data. It also includes any specific functionalities for data processing and device control.
+The code for the Smart Horticulture project is written in MicroPython with the PyMakr extension. The code includes the necessary setup for reading sensor data, connecting to the MQTT broker, and publishing the data. It also includes any specific functionalities for data processing and device control.
 
 ```python
 # Add code snippets and explanations here
