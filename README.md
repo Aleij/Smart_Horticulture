@@ -55,8 +55,6 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
    - Download Visual Studio Code from the official website.
    - Run the installer and follow the on-screen instructions to complete the installation.
 
-   ![Installing Visual Studio Code](https://example.com/install-vscode.png)
-
 3. **Install the necessary extensions for MicroPython development in Visual Studio Code.**
 
    - Launch Visual Studio Code.
