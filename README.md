@@ -181,20 +181,4 @@ The Smart Horticulture project utilizes a local installation of a cloud-based pl
 
 ## The Code
 
-The code for the Smart Horticulture project is written in MicroPython with the PyMakr extension. The code includes the necessary setup for reading sensor data, connecting to the MQTT broker, and publishing the data. It also includes any specific functionalities for data processing and device control.
-
-```python
-# Add code snippets and explanations here
-
-import this as that
-
-def my_cool_function():
-    print('not much here')
-
-s.send(package)
-
-# Explain your code!
-
-
-
-
+The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker. The main code file `main.py` contains the core functionalities, while `boot.py` handles the Wi-Fi connection. Additionally, the `timeDiff.py` file includes a helper class for managing time intervals. The `config.py` file stores the credentials and configurations related to Wi-Fi and MQTT, and the `simple.py` file provides the implementation of the MQTT client.
