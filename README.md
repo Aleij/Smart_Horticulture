@@ -68,33 +68,67 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
 
    ![Installing necessary extensions](images/INSTALL_PYMAKR.png)
 
-4. **Connect the Raspberry Pi Pico WH to your computer using a USB cable.**
-
-   - Take a USB cable and connect one end to the USB port on your computer and the other end to the USB port on the Raspberry Pi Pico WH.
-   - Ensure that the cable is securely connected to both devices.
-
-   ![Connecting Raspberry Pi Pico WH to computer](https://example.com/connect-pico.png)
-
-5. **Upload the code to the microcontroller and ensure proper communication is established.**
-
-   - Open the project folder in Visual Studio Code.
-   - Write or open your code file in Visual Studio Code.
-   - Click on the "Run" button in the top toolbar or use the keyboard shortcut `Ctrl+F5` to upload the code to the microcontroller.
-   - Check the output in the terminal or output window to verify successful communication.
-
-   ![Uploading code to Raspberry Pi Pico WH](https://example.com/upload-code.png)
-
 
 
 ## Ubuntu Server Setup
 
-To set up the Ubuntu server for running Mosquitto MQTT protocol and Node-RED, follow these steps:
+To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED, follow these steps:
 
-1. Install Ubuntu Server on your old laptop or a dedicated machine.
-2. Install Mosquitto MQTT broker on the Ubuntu server for communication between devices.
-3. Install Node-RED on the Ubuntu server for building the user interface and data flow management.
-4. Configure Mosquitto MQTT and Node-RED to communicate with the Raspberry Pi Pico WH and other devices.
-5. Ensure that the Ubuntu server is connected to the same network as the Raspberry Pi Pico WH.
+1. **Install Ubuntu Server on your old laptop or a dedicated machine.**
+
+   - Download the Ubuntu Server ISO from the official [website](https://ubuntu.com/download/server).
+   - Create a bootable USB drive using software like Rufus or BalenaEtcher.
+   - Boot your laptop or dedicated machine from the USB drive and follow the installation wizard to install Ubuntu Server.
+   - Create an admin user and password.
+   - Update the software package.
+     ```powershell
+     sudo apt update -y
+     sudo apt upgrade -y
+     ```
+
+2. **Install Mosquitto MQTT broker on the Ubuntu server for communication between devices.**
+
+   - Open PowerShell on your Windows computer.
+   - Connect to the Ubuntu server via SSH:
+     ```powershell
+     ssh ubuntu_server_ip_address
+     ```
+   - Update the package lists and install Mosquitto and Mosquitto-clients:
+     ```shell
+     sudo apt install -y mosquitto mosquitto-clients
+     ```
+   - Enable autostart when server boots.
+     ```shell
+     sudo systemctl enable mosquitto
+     ```
+
+3. **Install Node-RED on the Ubuntu server for building the user interface and data flow management.**
+
+   - Install Node.js and npm:
+     ```shell
+     sudo apt install nodejs npm
+     ```
+   - Verify the Node.js and npm installations:
+     ```shell
+     node --version
+     npm --version
+     ```
+   - Install Node-RED:
+     ```shell
+     sudo npm install node-red
+     ```
+
+4. **Configure Mosquitto MQTT and Node-RED to communicate with the Raspberry Pi Pico WH and other devices.**
+
+   - 
+
+5. **Ensure that the Ubuntu server is connected to the same network as the Raspberry Pi Pico WH.**
+
+   - Connect the Ubuntu server and the Raspberry Pi Pico WH to the same local network.
+   - Verify that the devices can communicate with each other by checking their IP addresses and network connectivity.
+
+Make sure to adapt the instructions based on your specific setup and requirements.
+
 
 ## Data Transmission and Visualization
 
