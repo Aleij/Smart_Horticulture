@@ -50,8 +50,6 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
    - The Raspberry Pi Pico WH will now appear as a mass storage device on your computer.
    - Copy the downloaded firmware (.uf2 file) and paste it into the mass storage device (Raspberry Pi Pico WH).
 
-   ![Adding the MicroPython firmware](images/INSTALL_PYMAKR.png)
-
 2. **Install Visual Studio Code.**
 
    - Download Visual Studio Code from the official website.
@@ -64,10 +62,11 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
    - Launch Visual Studio Code.
    - Open the Extensions view by clicking on the square icon on the left sidebar or by pressing `Ctrl+Shift+X`.
    - Search for the following extensions and install them:
+   
      - MicroPython by Microsoft
-     - Pico-Go by Fredrik Esseen
+     - PyMakr by Pycom
 
-   ![Setting up MicroPython extensions](https://example.com/micropython-extensions.png)
+   ![Installing necessary extensions](images/INSTALL_PYMAKR.png)
 
 4. **Connect the Raspberry Pi Pico WH to your computer using a USB cable.**
 
