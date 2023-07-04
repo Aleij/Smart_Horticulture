@@ -97,10 +97,21 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      ```shell
      sudo apt install -y mosquitto mosquitto-clients
      ```
-   - Enable autostart when server boots.
+   - Enable autostart at server boot.
      ```shell
-     sudo systemctl enable mosquitto
+     sudo systemctl enable mosquitto.service
      ```
+   - Test Mosquitto configuration:
+     Open up two PowerShells and ssh into the server on both.
+     In the first one:
+     ```shell
+     mosquitto_sub -t test/topic
+     ```
+     In the second one
+     ```shell
+     mosquitto_pub -t test/topic -m "Hello, MQTT!"
+     ```
+     If everything is set up correctly, you should see the published message appear in the terminal where you subscribed.
 
 3. **Install Node-RED on the Ubuntu server for building the user interface and data flow management.**
 
@@ -117,7 +128,11 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      ```shell
      sudo npm install node-red
      ```
-
+   - Enable autostart at server boot.
+     ```shell
+     sudo systemctl enable nodered.service
+     ```
+      
 4. **Configure Mosquitto MQTT and Node-RED to communicate with the Raspberry Pi Pico WH and other devices.**
 
    - 
