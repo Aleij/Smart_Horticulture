@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  By: <a href="https://github.com/Aleij">Olle Jönsson</a> - Student ID: XX666X
+  By: <a href="https://github.com/Aleij">Olle Jönsson</a> - Student ID: oj222iu
 </p>
 
 ## Project Overview
@@ -182,3 +182,15 @@ The Smart Horticulture project utilizes a local installation of a cloud-based pl
 ## The Code
 
 The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker. The main code file `main.py` contains the core functionalities, while `boot.py` handles the Wi-Fi connection. Additionally, the `timeDiff.py` file includes a helper class for managing time intervals. The `config.py` file stores the credentials and configurations related to Wi-Fi and MQTT, and the `simple.py` file provides the implementation of the MQTT client.
+
+## Transmitting the Data
+
+The data collected from the sensors is transmitted to an MQTT broker using the MQTT protocol. The choice of MQTT as the transport protocol offers lightweight and efficient messaging, reducing data overhead and conserving battery life. The MQTT client implementation provided in `simple.py` facilitates the communication with the MQTT broker.
+
+The data transmission interval is controlled by the `time_diff` object in `main.py`, which uses the `TimeDiff` class from `timeDiff.py` to check if the specified time interval has passed. Adjusting the timer value in `time_diff = timeDiff.TimeDiff(60)` allows you to modify the frequency of data updates.
+
+The wireless protocol used in this project is Wi-Fi, which enables relatively long-range and reliable communication within a local network. The code establishes a Wi-Fi connection by calling the `connect_to_wifi()` function from `boot.py`. The Wi-Fi credentials (SSID and password) should be updated in the `config.py` file to match your network settings.
+
+### Backend Presenting Data
+
+![Installing necessary extensions](images/UI.png)
