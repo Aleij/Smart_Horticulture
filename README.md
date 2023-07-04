@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  By: <a href="https://github.com/Aleij">Olle Jönsson</a> - Student ID: XX666X
+  By: <a href="https://github.com/Aleij">Olle Jönsson</a> - Student ID: oj222iu
 </p>
 
 ## Project Overview
