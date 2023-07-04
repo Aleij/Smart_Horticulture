@@ -151,7 +151,7 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 3. Node Red subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
 4. The dashboard displays real-time sensor readings.
 
-    ![Installing necessary extensions](images/M_conf.png)
+    ![Installing necessary extensions](images/NODE_RED_UI.png)
 
 ## Data Storage
 
