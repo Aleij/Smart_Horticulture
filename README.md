@@ -139,8 +139,7 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      ```shell
      sudo nano /etc/mosquitto/mosquitto.conf
      ```
-   - Add listener 1883
-         allow_anonymous true
+   - Add listener 1883 and allow_anonymous true
      
      ![Installing necessary extensions](images/M_conf.png)
 
