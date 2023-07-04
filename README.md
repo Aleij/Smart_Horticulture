@@ -70,7 +70,7 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
 
 ## Ubuntu Server Setup
 
-To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED, follow these steps:
+To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red, follow these steps:
 
 1. **Install Ubuntu Server on your old laptop or a dedicated machine.**
 
@@ -111,7 +111,7 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      ```
      If everything is set up correctly, you should see the published message appear in the terminal where you subscribed.
 
-3. **Install Node-RED on the Ubuntu server for building the user interface and data flow management.**
+3. **Install Node Red on the Ubuntu server for building the user interface and data flow management.**
 
    - Install Node.js and npm:
      ```shell
@@ -122,7 +122,7 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      node --version
      npm --version
      ```
-   - Install Node-RED:
+   - Install Node-red:
      ```shell
      sudo npm install node-red
      ```
@@ -144,16 +144,29 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
 
 ## Data Transmission and Visualization
 
-The Smart Horticulture project utilizes the MQTT protocol for data transmission and Node-RED for data visualization and user interface. The workflow is as follows:
+The Smart Horticulture project utilizes the MQTT protocol for data transmission and Node Red for data visualization and user interface. The workflow is as follows:
 
-1. The Raspberry Pi Pico WH collects sensor data and publishes it to specific MQTT topics.
+1. The Raspberry Pi Pico collects sensor data and publishes it to specific MQTT topics.
 2. The Ubuntu server, running Mosquitto MQTT broker, receives the published data.
-3. Node-RED subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
+3. Node Red subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
 4. The dashboard displays real-time sensor readings.
 
 ## Data Storage
 
-To save data from the sensors on the Ubuntu server, the "ToFile" node in Node-RED is used. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure to save the data at specific intervals, such as once every 30 minutes. 
+To save data from the sensors on the Ubuntu server, the "ToFile" node in Node Red is used. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure to save the data at specific intervals, such as once every 30 minutes. 
+
+### Create a data file
+
+- Choose your preferred location for storing the data file and create a directory and the data file:
+  ```shell
+     sudo mkdir /preferred-file-path/data
+     sudo touch /preferred-file-path/data/datafile.txt
+     ```
+- Setup permissions to allow Node Red "ToFile" node to write to the file:
+  ```shell
+     sudo chown *username* /preferred-file-path/data/datafile.txt
+     sudo chmod u+w /home/data/datafile.txt
+     ```
 
 ## Platform
 
