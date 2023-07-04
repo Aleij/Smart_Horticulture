@@ -1,7 +1,7 @@
 <h1 align="center">Smart Horticulture</h1>
 
 <p align="center">
-  <img src="images/github banner.jpg" alt="Project Banner">
+  <img src="images/github banner.png" alt="Project Banner">
 </p>
 
 <p align="center">
