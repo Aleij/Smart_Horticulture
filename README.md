@@ -30,26 +30,27 @@ List of materials used in the project:
 | <img src="images/DHT11.jpg" width="150">   | DHT11 Temperature and Humidity Sensor   | [Link](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/)                              | 49 SEK  |
 | <img src="images/RAIN.jpg" width="150">  | Rain Sensor                            | [Link](https://www.electrokit.com/produkt/regnsensor/)                               | 39 SEK         |
 | <img src="images/PIR.jpg" width="150">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://www.electrokit.com/produkt/pir-rorelsedetektor-hc-sr501/)                                | 49 SEK         |
-
+| <img src="images/RELAY.jpg" width="150">    | Relay module 3.3V (5V)    | [Link](https://www.electrokit.com/produkt/relamodul-5v/)                                | 39 SEK         |
+| <img src="images/DC-MOTOR.jpg" width="150">    | Jumper Wire Male to Female    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hona-hane/)                                | 29 SEK         |
+| <img src="images/BREADBOARD.jpg" width="150">    | Breadboard    | [Link](https://www.electrokit.com/produkt-kategori/kretskort-2/kopplingsdack-2/)                                | 69 SEK         |
+| <img src="images/CABLE_MM.jpg" width="150">    | Jumper Wire Male to Male    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hane-hane/)                                | 29 SEK         |
+| <img src="images/CABLE_MF.jpg" width="150">    | Jumper Wire Male to Female    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hona-hane/)                                | 29 SEK         |
 
 ## Computer Setup
 
 ## Programming the Raspberry Pi Pico WH Microcontroller
 
-To program the Raspberry Pi Pico WH microcontroller on a Windows 11 computer using Visual Studio Code, follow these steps:
+To program the Raspberry Pi Pico WH microcontroller on a Windows computer using Visual Studio Code, follow these steps:
 
 1. **Flash the MicroPython firmware onto the Raspberry Pi Pico WH.**
 
-   - Download the latest MicroPython firmware for Raspberry Pi Pico from the official website.
-   - Connect the Raspberry Pi Pico WH to your computer using a USB cable.
-   - Open a command prompt and navigate to the folder where you downloaded the firmware.
-   - Run the following command to flash the firmware:
+   - Download the latest MicroPython firmware for Raspberry Pi Pico from the official [website](https://micropython.org/download/rp2-pico-w/).
+   - Press and hold the BOOTSEL button on the Raspberry Pi Pico WH.
+   - While holding the BOOTSEL button, connect the Raspberry Pi Pico WH to your computer using a USB cable.
+   - The Raspberry Pi Pico WH will now appear as a mass storage device on your computer.
+   - Copy the downloaded firmware (.uf2 file) and paste it into the mass storage device (Raspberry Pi Pico WH).
 
-     ```
-     pio run -t upload
-     ```
-
-   ![Flashing the MicroPython firmware](https://example.com/flash-firmware.png)
+   ![Adding the MicroPython firmware](images/INSTALL_PYMAKR.png)
 
 2. **Install Visual Studio Code.**
 
