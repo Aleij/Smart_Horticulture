@@ -133,9 +133,16 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      sudo systemctl enable nodered.service
      ```
       
-4. **Configure Mosquitto MQTT and Node-RED to communicate with the Raspberry Pi Pico WH and other devices.**
+4. **Configure Mosquitto MQTT to communicate with the Raspberry Pi Pico WH, dissable local-only mode.**
 
-   - 
+   - Locate the mosquitto.conf file. It's usually at /etc/mosquitto/
+     ```shell
+     sudo nano /etc/mosquitto/mosquitto.conf
+     ```
+   - Add listener 1883
+         allow_anonymous true
+     
+     ![Installing necessary extensions](images/M_conf.png)
 
 5. **Ensure that the Ubuntu server is connected to the same network as the Raspberry Pi Pico WH.**
 
