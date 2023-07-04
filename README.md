@@ -149,11 +149,11 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 1. The Raspberry Pi Pico WH collects sensor data and publishes it to specific MQTT topics.
 2. The Ubuntu server, running Mosquitto MQTT broker, receives the published data.
 3. Node-RED subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
-4. The dashboard displays real-time sensor readings, historical data, and provides control options for the horticulture system.
+4. The dashboard displays real-time sensor readings.
 
 ## Data Storage
 
-To save data from the sensors on the Ubuntu server, we use the "ToFile" node in Node-RED. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure the "ToFile" node to save the data at specific intervals, such as once every 30 minutes.
+To save data from the sensors on the Ubuntu server, the "ToFile" node in Node-RED is used. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure to save the data at specific intervals, such as once every 30 minutes. 
 
 ## Platform
 
