@@ -143,13 +143,6 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node-RED
      
      ![Installing necessary extensions](images/M_conf.png)
 
-5. **Ensure that the Ubuntu server is connected to the same network as the Raspberry Pi Pico WH.**
-
-   - Connect the Ubuntu server and the Raspberry Pi Pico WH to the same local network.
-   - Verify that the devices can communicate with each other by checking their IP addresses and network connectivity.
-
-Make sure to adapt the instructions based on your specific setup and requirements.
-
 
 ## Data Transmission and Visualization
 
