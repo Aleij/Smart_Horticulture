@@ -160,7 +160,9 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 
     ![Installing necessary extensions](images/NODE_RED_UI.png)
 
-    ![Installing necessary extensions](images/MOVEMENT.png)
+    <p align="center">
+    <img src="images/MOVEMENT.png" alt="Image" />
+    </p>
 
 ## Data Storage
 
@@ -206,7 +208,7 @@ The data transmission interval is controlled by the `time_diff` object in `main.
 
 The wireless protocol used in this project is Wi-Fi, which enables relatively long-range and reliable communication within a local network. The code establishes a Wi-Fi connection by calling the `connect_to_wifi()` function from `boot.py`. The Wi-Fi credentials (SSID and password) should be updated in the `config.py` file to match your network settings.
 
-### Backend Presenting Data
+### Node Red Backend
 
 ![Installing necessary extensions](images/UI.png)
 
