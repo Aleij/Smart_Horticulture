@@ -10,7 +10,7 @@
 
 ## Project Overview
 
-The Smart Horticulture project aims to build a system for monitoring temperature, humidity, rainfall, and motion in a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor for controlling a motor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
+The Smart Horticulture project aims to build a system for monitoring a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor for controlling a motor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
 
 ## Objective
 
@@ -19,7 +19,7 @@ The main objective of the Smart Horticulture project is to create an automated m
 - Monitor and maintain optimal environmental conditions for plant growth
 - Detect and respond to changes in environmental parameters
 - Provide insights for better plant care and resource management
-- Survail the plant for bird intruders
+- Survailance of the plants for bird intruders
 
 ## Materials
 
@@ -32,14 +32,14 @@ List of materials used in the project:
 | <img src="images/RAIN.jpg" width="150">  | Rain Sensor                            | [Link](https://www.electrokit.com/produkt/regnsensor/)                               | 39         |
 | <img src="images/PIR.jpg" width="150">    | PIR (Passive Infrared) Motion Sensor    | [Link](https://www.electrokit.com/produkt/pir-rorelsedetektor-hc-sr501/)                                | 49         |
 | <img src="images/RELAY.jpg" width="150">    | Relay module 3.3V (5V)    | [Link](https://www.electrokit.com/produkt/relamodul-5v/)                                | 39         |
-| <img src="images/DC-MOTOR.jpg" width="150">    | Jumper Wire Male to Female    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hona-hane/)                                | 29         |
+| <img src="images/DC-MOTOR.jpg" width="150">    | DC Motor    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hona-hane/)                                | -         |
 | <img src="images/BREADBOARD.jpg" width="150">    | Breadboard    | [Link](https://www.electrokit.com/produkt-kategori/kretskort-2/kopplingsdack-2/)                                | 69         |
 | <img src="images/CABLE_MM.jpg" width="150">    | Jumper Wire Male to Male    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hane-hane/)                                | 29         |
 | <img src="images/CABLE_MF.jpg" width="150">    | Jumper Wire Male to Female    | [Link](https://www.electrokit.com/produkt/labbsladd-20-pin-15cm-hona-hane/)                                | 29         |
 
 ## Computer Setup
 
-## Programming the Raspberry Pi Pico WH Microcontroller
+### Programming the Raspberry Pi Pico WH Microcontroller
 
 To program the Raspberry Pi Pico WH microcontroller on a Windows computer using Visual Studio Code, follow these steps:
 
@@ -69,7 +69,7 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
 
 
 
-## Ubuntu Server Setup
+### Ubuntu Server Setup
 
 To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red, follow these steps:
 
@@ -143,6 +143,12 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red
      ![Installing necessary extensions](images/M_conf.png)
 
 
+## Putting Everything Together
+
+You can arrange the components as desired, but make sure to connect everything correctly.
+
+![Installing necessary extensions](images/DIAGRAM.png)
+
 ## Data Transmission and Visualization
 
 The Smart Horticulture project utilizes the MQTT protocol for data transmission and Node Red for data visualization and user interface. The workflow is as follows:
@@ -153,6 +159,10 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 4. The dashboard displays real-time sensor readings.
 
     ![Installing necessary extensions](images/NODE_RED_UI.png)
+
+    <p align="center">
+    <img src="images/MOVEMENT.png" alt="Image" />
+    </p>
 
 ## Data Storage
 
@@ -182,7 +192,13 @@ The Smart Horticulture project utilizes a local installation of a cloud-based pl
 
 ## The Code
 
-The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker. The main code file `main.py` contains the core functionalities, while `boot.py` handles the Wi-Fi connection. Additionally, the `timeDiff.py` file includes a helper class for managing time intervals. The `config.py` file stores the credentials and configurations related to Wi-Fi and MQTT, and the `simple.py` file provides the implementation of the MQTT client.
+The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker.
+
+- `boot.py` handles the Wi-Fi connection.
+- `main.py` contains the core functionalities of collecting and sending data to the broker.
+- `timeDiff.py` includes a helper class for managing time intervals.
+- `config.py` stores the credentials and configurations related to Wi-Fi and MQTT.
+- `simple.py` provides the implementation of the MQTT client.
 
 ## Transmitting the Data
 
@@ -192,7 +208,7 @@ The data transmission interval is controlled by the `time_diff` object in `main.
 
 The wireless protocol used in this project is Wi-Fi, which enables relatively long-range and reliable communication within a local network. The code establishes a Wi-Fi connection by calling the `connect_to_wifi()` function from `boot.py`. The Wi-Fi credentials (SSID and password) should be updated in the `config.py` file to match your network settings.
 
-### Backend Presenting Data
+### Node Red Backend
 
 ![Installing necessary extensions](images/UI.png)
 
