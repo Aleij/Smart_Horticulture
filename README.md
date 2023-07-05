@@ -160,6 +160,8 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 
     ![Installing necessary extensions](images/NODE_RED_UI.png)
 
+    ![Installing necessary extensions](images/MOVEMENT.png)
+
 ## Data Storage
 
 To save data from the sensors on the Ubuntu server, the "ToFile" node in Node Red is used. This node allows us to save the sensor data with timestamps into a text file on the server's local storage. We can configure to save the data at specific intervals, such as once every 30 minutes. 
