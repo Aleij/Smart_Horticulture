@@ -143,6 +143,12 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red
      ![Installing necessary extensions](images/M_conf.png)
 
 
+## Putting Everything Together
+
+You can arrange the components as desired, but make sure to connect everything correctly.
+
+![Installing necessary extensions](images/DIAGRAM.png)
+
 ## Data Transmission and Visualization
 
 The Smart Horticulture project utilizes the MQTT protocol for data transmission and Node Red for data visualization and user interface. The workflow is as follows:
@@ -182,7 +188,13 @@ The Smart Horticulture project utilizes a local installation of a cloud-based pl
 
 ## The Code
 
-The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker. The main code file `main.py` contains the core functionalities, while `boot.py` handles the Wi-Fi connection. Additionally, the `timeDiff.py` file includes a helper class for managing time intervals. The `config.py` file stores the credentials and configurations related to Wi-Fi and MQTT, and the `simple.py` file provides the implementation of the MQTT client.
+The code files provided in this project serve the purpose of collecting sensor data, establishing a connection to Wi-Fi, and transmitting the data to an MQTT broker.
+
+- `boot.py` handles the Wi-Fi connection.
+- `main.py` contains the core functionalities.
+- `timeDiff.py` file includes a helper class for managing time intervals.
+- `config.py` file stores the credentials and configurations related to Wi-Fi and MQTT.
+- `simple.py` file provides the implementation of the MQTT client.
 
 ## Transmitting the Data
 
