@@ -21,26 +21,32 @@ adc = machine.ADC(26)
 wlan = network.WLAN(network.STA_IF)
 time_diff = timeDiff.TimeDiff(60)
 
-def on_message(topic, message):
-    print(message.decode())
-    if int(message.decode()) == 1:
-        motor.value(1)
+# Send initial values when the Pico boot
+def initialize():
+    tempSensor.measure()
+    temperature = tempSensor.temperature()
+    humidity = tempSensor.humidity()
+    mqtt_client.publish("{}/{}".format(topic_1, subtopic_1), '{{"Temp": {}, "Humid": {}}}'.format(temperature, humidity))
+    mqtt_client.publish("{}/{}".format(topic_1, subtopic_2), "{}".format(PIR_value))
+    rain = 100-(adc.read_u16()/369)
+    if rain <= 1:
+        rain_f = 0
     else:
-        motor.value(0)
+        rain_f = "{:.0f}".format(rain)
+    mqtt_client.publish("{}/{}".format(topic_1, subtopic_3), "{}".format(rain_f))
+
 
 # Define MQTT client
 mqtt_client = MQTTClient(config.MQTT_CLIENT_ID, config.MQTT_SERVER, config.MQTT_PORT)
 
-# mqtt_client.set_callback(on_message)  Om jag ska subscribea
-
 # Connect to MQTT broker
 mqtt_client.connect()
-# mqtt_client.subscribe("test")  Om jag ska subscribea
 
+initialize()
 start_time = time.ticks_ms()
 
 while True:
-    if not wlan.isconnected():
+    while not wlan.isconnected():
         boot.connect_to_wifi()
 
     try:
@@ -55,6 +61,10 @@ while True:
         if PIR_value != PIR_sensor_t:
             mqtt_client.publish("{}/{}".format(topic_1, subtopic_2), "{}".format(PIR_value))
             PIR_sensor_t = PIR_value
+        if PIR_value == 1:
+            motor.value(1)
+        else:
+            motor.value(0)
 
         rain = 100-(adc.read_u16()/369)
         if rain <= 1:
@@ -65,9 +75,6 @@ while True:
         if rain_f != rain_t:
             mqtt_client.publish("{}/{}".format(topic_1, subtopic_3), "{}".format(rain_f))
             rain_t = rain_f
-        
-        # mqtt_client.check_msg()  Om jag ska subscribea
-        #mqtt_client.publish("test", "{}".format(rain))
 
     except Exception as error:
         print("Exception occurred", error)
