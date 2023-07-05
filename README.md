@@ -10,7 +10,7 @@
 
 ## Project Overview
 
-The Smart Horticulture project aims to build a system for monitoring temperature, humidity, rainfall, and motion in a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor for controlling a motor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
+The Smart Horticulture project aims to build a system for monitoring a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor for controlling a motor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
 
 ## Objective
 
@@ -19,7 +19,7 @@ The main objective of the Smart Horticulture project is to create an automated m
 - Monitor and maintain optimal environmental conditions for plant growth
 - Detect and respond to changes in environmental parameters
 - Provide insights for better plant care and resource management
-- Survail the plant for bird intruders
+- Survailance of the plants for bird intruders
 
 ## Materials
 
@@ -39,7 +39,7 @@ List of materials used in the project:
 
 ## Computer Setup
 
-## Programming the Raspberry Pi Pico WH Microcontroller
+### Programming the Raspberry Pi Pico WH Microcontroller
 
 To program the Raspberry Pi Pico WH microcontroller on a Windows computer using Visual Studio Code, follow these steps:
 
@@ -69,7 +69,7 @@ To program the Raspberry Pi Pico WH microcontroller on a Windows computer using 
 
 
 
-## Ubuntu Server Setup
+### Ubuntu Server Setup
 
 To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red, follow these steps:
 
