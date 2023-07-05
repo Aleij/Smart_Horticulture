@@ -140,14 +140,14 @@ To set up the Ubuntu server for running the Mosquitto MQTT protocol and Node Red
      ```
    - Add listener 1883 and allow_anonymous true
      
-     ![Installing necessary extensions](images/M_conf.png)
+     ![Mosquitto conf file](images/M_conf.png)
 
 
 ## Putting Everything Together
 
 You can arrange the components as desired, but make sure to connect everything correctly.
 
-![Installing necessary extensions](images/DIAGRAM.png)
+![Final design diagram](images/DIAGRAM.png)
 
 ## Data Transmission and Visualization
 
@@ -158,7 +158,7 @@ The Smart Horticulture project utilizes the MQTT protocol for data transmission 
 3. Node Red subscribes to the MQTT topics, retrieves the sensor data, and presents it on a user-friendly dashboard.
 4. The dashboard displays real-time sensor readings.
 
-    ![Installing necessary extensions](images/NODE_RED_UI.png)
+    ![User interface, Node Red](images/NODE_RED_UI.png)
 
     <p align="center">
     <img src="images/MOVEMENT.png" alt="Image" />
@@ -210,8 +210,9 @@ The wireless protocol used in this project is Wi-Fi, which enables relatively lo
 
 ### Node Red Backend
 
-![Installing necessary extensions](images/UI.png)
+![Node Red Backend](images/UI.png)
 
 ## Finilizing the Design
 
-![Installing necessary extensions](images/PROJECT.jpg)
+![The project including plants](images/PROJECT_PLANTS.jpg)
+![The project](images/PROJECT.jpg)
