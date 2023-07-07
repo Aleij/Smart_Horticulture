@@ -12,6 +12,8 @@
 
 The Smart Horticulture project aims to build a system for monitoring a horticulture environment. The project utilizes the Raspberry Pi Pico WH microcontroller along with a temperature and humidity sensor, a rain sensor, and a PIR motion sensor for controlling a motor. The collected data provides insights into the environmental conditions and helps optimize plant growth and care.
 
+### Estimated time needed for this project: 6 hours
+
 ## Objective
 
 The main objective of the Smart Horticulture project is to create an automated monitoring system for horticulture environments. By utilizing sensors to collect data on temperature, humidity, rainfall, and motion, we aim to achieve the following:
